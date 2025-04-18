@@ -1,6 +1,8 @@
 # BENZINGA EARNINGS WIDGET
 
-I've deployed this to vercel and you can view it directly here: https://benzinga-earnings-widget.vercel.app/
+The widget is deployed on **Vercel**. You can access the live version https://benzinga-earnings-widget.vercel.app/
+
+---
 
 ### `Functionality Overview`
 
@@ -8,45 +10,45 @@ I've deployed this to vercel and you can view it directly here: https://benzinga
 
 The widget displays the most anticipated earnings releases for the current week, categorized by days and times (Before Open and After Close).
 
-### `Key Features:`
+## Features
+- **Dynamic Data Fetching**: Fetches earnings data and company logos from Benzinga's API.
+- **Categorization**: Organizes earnings data by day and time for better readability.
+- **Interactive UI**: Clicking on a company redirects users to its detailed page on Benzinga.
+- **Loading States**: Displays shimmer effects while data is being fetched.
+- **Error Handling**: Provides user-friendly error messages and retry options.
+- **Responsive Design**: Fully responsive for all screen sizes.
 
-**Dynamic Data Fetching:** Fetches earnings data and company logos from Benzinga's API.
+---
 
-**Categorization:** Organizes earnings data by day and time for better readability.
+## Visual Enhancements
+- **Background Shade**: The widget includes a subtle background text "EARNINGS WHISPERS" in light grey as shown in the assignment screenshot.
+- **Shimmer Effect**: Added a visually appealing shimmer effect to improve perceived performance during data loading.
 
-**Interactive UI:** Clicking on a company redirects users to its detailed page on Benzinga.
+---
 
-**Loading States:** Displays shimmer effects while data is being fetched.
+## Performance Optimizations
+- **Caching API Responses**: API responses are cached in `localStorage` to reduce redundant API calls. Also cached data is validated against a maximum age (5 minutes) to ensure freshness.
+- **Lazy Loading**: Logos are fetched only for the tickers present in the earnings data.
+- **Efficient Data Processing**: Data is filtered and organized using optimized utility functions like reduce etc.
 
-**Error Handling:** Provides user-friendly error messages.
-
-
-### `Performance Improvements:`
-
-**Caching API Responses:**
-
-Implemented a caching mechanism using localStorage to reduce redundant API calls. Cached data is validated against a maximum age (5 minutes) to ensure freshness.
-
-**Optimized Data Processing:**
-
-Used reduce to efficiently organize earnings data by day and time. Filtered recent earnings to limit the dataset to relevant information.
-
-**Lazy Loading Logos:**
-
-Logos are fetched only for the tickers present in the earnings data, reducing unnecessary API calls.
-
-**Shimmer Loading Effect:**
-
-Added a visually appealing shimmer effect to improve perceived performance during data loading.
+---
 
 ### `Technologies Used:`
-React: For building the component-based UI.
+- **React**:  For building the component-based UI.
+- **CSS**:  For styling and responsive design.
+- **Benzinga API**: For fetching earnings and logo data.
+- **Vercel**: For deployment and hosting.
 
-CSS: For styling and responsive design.
+---
 
-Benzinga API: For fetching earnings and logo data.
+## File Structure
+- **EarningsCalendarWidget.js**: Main component rendering the widget.
+- **EarningsDay.js**: Subcomponent for displaying earnings data for a specific day.
+- **EarningsItem.js**: Subcomponent for individual earnings items.
+- **EarningsUtils.js**: Utility functions for filtering and organizing data.
+- **EarningsApi.js**: Handles API calls with caching.
 
-Vercel: For deployment and hosting.
+---
 
 ### `npm start`
 
