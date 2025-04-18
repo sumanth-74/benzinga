@@ -1,0 +1,179 @@
+.earnings-calendar-widget {
+  position: relative;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  border: 10px solid #dcb88c;
+  max-width: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.widget-logo {
+  width: 300px;
+  height: auto;
+  margin-right: 20%;
+}
+
+.earnings-calendar-widget h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.widget-header {
+  display: flex;
+  background-color: #dcb88c;
+  color: black;
+  padding: 10px;
+  justify-content: center;
+}
+
+.widget-header.full-width {
+  justify-content: center;
+}
+
+.widget-header h1 {
+  margin: 0; /* Remove margin for h1 tags in the header */
+}
+
+.widget-day {
+  background-color: #dcb88c;
+  margin: 0px
+}
+
+.earnings-calendar-widget p {
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.earnings-table {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.earnings-day {
+  flex: 1;
+  text-align: center;
+  border-right: 2px solid #dcb88c;
+}
+
+.earnings-day:last-child {
+  border-right: none;
+}
+
+.earnings-day.last-column {
+  flex: 0.5; /* Set the last column to take half the width of other columns */
+}
+
+.earnings-day h3 {
+  font-size: 1.1em;
+}
+
+.earnings-day p {
+  font-size: 0.8em;
+  color: #888;
+}
+
+.earnings-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.earnings-column {
+  flex: 1;
+  text-align: center;
+}
+
+.earnings-column h4 {
+  font-size: 0.9em;
+  margin: 0;
+  color: #333;
+}
+
+.earnings-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.ticker-item {
+  margin-bottom: 0px;
+  max-width: 60%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.shimmer-logo,
+.shimmer-day-header,
+.shimmer-row {
+  background: linear-gradient(
+    90deg,
+    rgba(200, 200, 200, 0.2) 25%,
+    rgba(200, 200, 200, 0.4) 50%,
+    rgba(200, 200, 200, 0.2) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+.shimmer-logo {
+  width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+  margin-right: 20%;
+}
+
+.shimmer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.shimmer-day {
+  flex: 1;
+  text-align: center;
+  border-right: 2px solid #dcb88c;
+  padding: 10px;
+}
+
+.shimmer-day:last-child {
+  border-right: none;
+}
+
+.shimmer-day-header {
+  width: 60%;
+  height: 20px;
+  margin: 0 auto 10px;
+}
+
+.shimmer-row {
+  width: 75%;
+  height: 50px;
+  margin: 10px auto;
+}
+
+.shimmer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin: 10px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
