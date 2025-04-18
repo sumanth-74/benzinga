@@ -29,6 +29,19 @@
   align-items: center;
 }
 
+.earnings-calendar-widget::before {
+  content: 'EARNINGS WHISPERS';
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15rem; /* Increased font size */
+  font-weight: bold;
+  color: rgba(211, 211, 211, 0.3); /* Light grey color */
+  z-index: 1;
+  pointer-events: none;
+}
+
 .widget-header.full-width {
   justify-content: center;
 }
