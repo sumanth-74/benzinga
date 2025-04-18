@@ -7,7 +7,7 @@ const EarningsDay = ({ day, beforeOpen, afterClose, logos, isLoading }) => {
 
   const renderEarningsColumn = (title, earnings) => (
     <div className="earnings-column">
-      <h4 className="widget-header">{title}</h4>
+      <h4 className="widget-header-h4">{title}</h4>
       {earnings.map((earning) => (
         <EarningsItem
           key={earning.ticker}

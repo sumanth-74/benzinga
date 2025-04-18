@@ -26,7 +26,7 @@
   background-color: #dcb88c;
   color: black;
   padding: 10px;
-  justify-content: center;
+  align-items: center;
 }
 
 .widget-header.full-width {
@@ -34,7 +34,15 @@
 }
 
 .widget-header h1 {
-  margin: 0; /* Remove margin for h1 tags in the header */
+  margin: 0; 
+}
+
+.widget-header-h4 {
+  display: flex;
+  background-color: #dcb88c;
+  color: black;
+  padding: 10px;
+  justify-content: center;
 }
 
 .widget-day {
