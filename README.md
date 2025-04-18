@@ -59,7 +59,7 @@ I've written unit test cases for the required components.
 
 ### `Preview of widget`
 
-![Screenshot 2025-04-18 at 3 17 37 PM](https://github.com/user-attachments/assets/df47a83a-7790-4091-a043-02fcb453e748)
+![Screenshot 2025-04-18 at 3 35 37 PM](https://github.com/user-attachments/assets/afc68ad1-2228-4dc7-97c1-22ecc0d19a39)
 
 
 
