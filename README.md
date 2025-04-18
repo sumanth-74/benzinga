@@ -1,5 +1,9 @@
 # BENZINGA EARNINGS WIDGET
+
+I've deployed this to vercel and you can view it directly here: https://benzinga-earnings-widget.vercel.app/
+
 **Functionality Overview**
+
 **Purpose:**
 
 The widget displays the most anticipated earnings releases for the current week, categorized by days and times (Before Open and After Close).
@@ -43,8 +47,6 @@ CSS: For styling and responsive design.
 Benzinga API: For fetching earnings and logo data.
 
 Vercel: For deployment and hosting.
-
-I've deployed this to vercel and you can view it directly here: https://benzinga-earnings-widget.vercel.app/
 
 ### `npm start`
 
