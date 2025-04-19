@@ -8,7 +8,6 @@ const EarningsItem = ({ ticker, logo, searchKey, isLoading }) => {
   };
 
   if (isLoading) return <div className="shimmer-logo"></div>;
-  if (!logo) return null;
 
   return (
     <div
@@ -16,17 +15,15 @@ const EarningsItem = ({ ticker, logo, searchKey, isLoading }) => {
       onClick={handleClick}
       aria-label={`View details for ${ticker}`}
     >
-      <p className="ticker-item">{searchKey}</p>
-      <img src={logo} alt={ticker} className="company-logo" />
+      <p className="ticker-item">{searchKey || ticker}</p>
+      {logo ? (
+        <img src={logo} alt={ticker} className="company-logo" />
+      ) : (
+        <div className="fallback-logo">{ticker}</div> // Fallback UI for missing logo
+      )}
     </div>
   );
 };
 
-EarningsItem.propTypes = {
-  ticker: PropTypes.string.isRequired,
-  logo: PropTypes.string,
-  searchKey: PropTypes.string,
-  isLoading: PropTypes.bool.isRequired,
-};
 
 export default EarningsItem;

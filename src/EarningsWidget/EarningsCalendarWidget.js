@@ -3,7 +3,7 @@ import EarningsDay from './EarningsDay';
 import './EarningsCalendarWidget.css';
 import earning from '../earning.svg';
 import { fetchEarningsData, fetchLogosData } from './EarningsApi';
-import { filterRecentEarnings, organizeEarningsData, formatWeekDates } from './EarningsUtils';
+import { organizeEarningsData, formatWeekDates } from './EarningsUtils';
 
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
 const weekDates = formatWeekDates(days);
@@ -18,11 +18,9 @@ const EarningsCalendarWidget = () => {
     const loadData = async () => {
       try {
         const earnings = await fetchEarningsData();
-        const recentEarnings = filterRecentEarnings(earnings);
+        setEarningsData(earnings);
 
-        setEarningsData(recentEarnings);
-
-        const tickers = recentEarnings.map((e) => e.ticker);
+        const tickers = earnings.map((e) => e.ticker);
         const logosData = await fetchLogosData(tickers);
 
         const logoMap = tickers.reduce((acc, ticker) => {

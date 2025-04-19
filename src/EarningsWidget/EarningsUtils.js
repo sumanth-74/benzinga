@@ -1,12 +1,8 @@
-
-export const filterRecentEarnings = (earnings, monthsAgo = 3) => {
-  const lastQuarter = new Date();
-  lastQuarter.setMonth(lastQuarter.getMonth() - monthsAgo);
-  return earnings.filter((earning) => new Date(earning.date) >= lastQuarter);
-};
-
 export const organizeEarningsData = (earnings) => {
   return earnings.reduce((acc, earning) => {
+    if (!earning.date || !earning.time) {
+      return acc;
+    }
     const day = new Date(earning.date).toLocaleDateString('en-US', { weekday: 'long' });
     const key = `${day}-${earning.time < '09:30:00' ? 'before' : 'after'}`;
     acc[key] = acc[key] || [];
